@@ -69,11 +69,9 @@ export function VerifyDialog({ event }: VerifyDialogProps) {
 
   return (
     <Dialog open={open} onOpenChange={(v) => { setOpen(v); if (!v) reset(); }}>
-      <DialogTrigger asChild>
-        <Button variant="outline" size="sm" className="h-7 gap-1.5 text-xs">
-          <ShieldCheck className="h-3 w-3" />
-          Verify
-        </Button>
+      <DialogTrigger render={<Button variant="outline" size="sm" className="h-7 gap-1.5 text-xs" />}>
+        <ShieldCheck className="h-3 w-3" />
+        Verify
       </DialogTrigger>
       <DialogContent className="sm:max-w-lg">
         <DialogHeader>

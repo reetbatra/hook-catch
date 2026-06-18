@@ -62,11 +62,9 @@ export function ReplayDialog({ event }: ReplayDialogProps) {
 
   return (
     <Dialog open={open} onOpenChange={(v) => { setOpen(v); if (!v) reset(); }}>
-      <DialogTrigger asChild>
-        <Button variant="outline" size="sm" className="h-7 gap-1.5 text-xs">
-          <RotateCcw className="h-3 w-3" />
-          Replay
-        </Button>
+      <DialogTrigger render={<Button variant="outline" size="sm" className="h-7 gap-1.5 text-xs" />}>
+        <RotateCcw className="h-3 w-3" />
+        Replay
       </DialogTrigger>
       <DialogContent className="sm:max-w-md">
         <DialogHeader>
