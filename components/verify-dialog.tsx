@@ -90,7 +90,7 @@ export function VerifyDialog({ event }: VerifyDialogProps) {
           <div className="grid grid-cols-2 gap-3">
             <div className="space-y-2">
               <Label>Scheme</Label>
-              <Select value={scheme} onValueChange={setScheme}>
+              <Select value={scheme} onValueChange={(v) => v && setScheme(v)}>
                 <SelectTrigger>
                   <SelectValue />
                 </SelectTrigger>
